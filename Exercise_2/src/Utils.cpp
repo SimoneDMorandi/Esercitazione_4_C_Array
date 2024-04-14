@@ -1,11 +1,9 @@
 #include "Utils.hpp"
 #include <iostream>
 #include <fstream>
-#include <streambuf>
 #include <iomanip>
 
 using namespace std;
-
 
 //Corpo della funzione di stampa di "w" e "r".
 void print_vec(const double (&data)[11][2], ofstream &of)
@@ -55,6 +53,7 @@ double r(const double (&data)[11][2])
     double rate_of_return = 0;
     for (int i=3; i < size_row; i++)
     {
+        // Rendimento calcolato come media pesata dei singoli r_i.
         double prod = 1.0;
         for (int j=0; j < size_col; j++)
         {
